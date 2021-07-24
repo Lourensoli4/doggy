@@ -3,15 +3,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Stack:
-- TypeScript
 - ReactJS
+- TypeScript
 - TailwindCSS
 
 Please note that 'react-scripts' have been changed to 'craco' to override the PostCSS configuration natively to accommodate TailwindCSS.
 
 ## Prerequisites
 
-1. Node.js and Node Package Manager (npm) - Refer to [this guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+1. Node.js and Node Package Manager (npm) - Refer to [this guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install.
 
 ## How to Get Started
 
