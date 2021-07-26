@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Intelligent Doggy Identification Application
+
+![doggy](https://user-images.githubusercontent.com/36879262/126941593-259f9753-02bf-40da-b0f1-cf5daeb03985.gif)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
