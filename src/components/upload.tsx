@@ -49,7 +49,7 @@ class Upload extends React.Component<any, any> {
         </div>
         {/* Prediction */}
         <div className="p-4 bg-gray-100 rounded shadow w-80">
-          <label className="text-gray-800">Do you know what dog breed it is? We're prety sure it's a... {this.state.prediction.className}</label>
+          <label className="text-gray-800">Do you know what dog breed it is? We're pretty sure it's a... {this.state.prediction.className}</label>
         </div>
       </div>
     );
