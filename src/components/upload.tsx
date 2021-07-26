@@ -38,19 +38,18 @@ class Upload extends React.Component<any, any> {
 
   render() {
     return (
-      <div>
+      <div className="flex flex-col items-center">
         {/* Upload */}
-        <div className="flex justify-center">
+        <div className="p-4 text-center bg-white rounded shadow-inner w-80">
           <input type="file" onChange={this.handleChange} className=""/>
         </div>
         {/* Preview */}
-        <div className="flex justify-center my-5">
-          <img src={this.state.file} alt="Woof, woof!" id="img" className="flex justify-center"/>
+        <div className="my-5">
+          <img src={this.state.file} alt="" id="img" className="rounded w-80"/>
         </div>
         {/* Prediction */}
-        <div className="flex justify-center">
-          <p></p>
-          <label className="w-60">Do you know what dog breed it is? We're prety sure it's a... {this.state.prediction.className}</label>
+        <div className="p-4 bg-gray-100 rounded shadow w-80">
+          <label className="text-gray-800">Do you know what dog breed it is? We're prety sure it's a... {this.state.prediction.className}</label>
         </div>
       </div>
     );
