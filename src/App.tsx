@@ -1,8 +1,10 @@
 import React from 'react';
+import { Suspense, lazy } from 'react';
 import './App.css';
-import Header from './components/header';
-import Upload from './components/upload'
-import Gallery from './components/gallery';
+
+const Gallery = React.lazy(() => import('./components/gallery'));
+const Header = React.lazy(() => import('./components/header'));
+const Upload = React.lazy(() => import('./components/upload'))
 
 function App() {
   const tfjs = document.createElement("script");
@@ -11,21 +13,14 @@ function App() {
   const mobilenet = document.createElement("script");
       mobilenet.async = true;
       mobilenet.src = "https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0";
-  return (
-    <div className="text-center">
-      
-      <div>
-        < Header/>
-      </div>
-      
-      <div>
-        < Upload/>
-      </div>
-      
-      <div>
-        < Gallery/>
-      </div>
 
+  return (
+    <div className="font-sans text-center">
+      <Suspense fallback={<div></div>}>
+          < Header/>
+          < Upload/>
+          < Gallery/>
+      </Suspense>
     </div>
   );
 }
