@@ -1,6 +1,6 @@
 # Intelligent Doggy Identification Application
 
-![doggy](https://user-images.githubusercontent.com/36879262/126941593-259f9753-02bf-40da-b0f1-cf5daeb03985.gif)
+![doggy](https://user-images.githubusercontent.com/36879262/126988674-658a1561-73cf-4824-bdf6-44556085ea05.gif)
 
 ## Still to add / missing
 
