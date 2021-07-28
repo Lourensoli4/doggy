@@ -2,11 +2,13 @@ import React from "react";
 import { breedService } from "../services/breed-service";
 
 class Gallery extends React.Component<any, any> {
+  public galleryText =  "Nope, no doggy images just yet";
+  
   constructor(props: any){
     super(props)
     this.state = {
       breed: "",
-      images: []
+      images: [],
     }
     breedService.getData().subscribe(breed => {
       this.setState({
@@ -22,7 +24,7 @@ class Gallery extends React.Component<any, any> {
     .then(response => response.json())
     .then(data => {
       this.setState({
-        images: data.message
+        images: data.message,
       })
     });
   }
@@ -31,7 +33,7 @@ class Gallery extends React.Component<any, any> {
   render() {
     return (
       <div className="flex flex-wrap justify-center py-10 mx-5 rounded-xl">
-        {Array.isArray(this.state.images) && this.state.images.length === 0 && "No images where returned"}
+        {Array.isArray(this.state.images) && this.state.images.length === 0 && `${this.galleryText}`}
         {Array.isArray(this.state.images) && this.state.images.length > 0 && this.state.images.map((image:any) => (
             <img src={image} alt="Woof, woof!" id="img" className="object-contain m-4 rounded shadow max-w-60 max-h-60"/>
         ))}

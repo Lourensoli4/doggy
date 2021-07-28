@@ -41,7 +41,7 @@ class Upload extends React.Component<any, any> {
       <div className="flex flex-col items-center">
         {/* Upload */}
         <div className="p-4 text-center bg-white rounded shadow-inner w-60 sm:w-80">
-          <input type="file" onChange={this.handleChange} className=""/>
+          <input type="file" accept=".jpg,.jpeg,.png" onChange={this.handleChange} className="" data-testid="input-file"/>
         </div>
         {/* Preview */}
         <div className="my-5">
