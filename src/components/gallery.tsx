@@ -31,8 +31,9 @@ class Gallery extends React.Component<any, any> {
   render() {
     return (
       <div className="flex flex-wrap justify-center py-10 mx-5 rounded-xl">
-        {this.state.images.map((image:any) => (
-            <img src={image} alt="Woof, woof!" id="img" className="object-contain m-4 rounded max-w-60 max-h-60"/>
+        {Array.isArray(this.state.images) && this.state.images.length === 0 && "No images where returned"}
+        {Array.isArray(this.state.images) && this.state.images.length > 0 && this.state.images.map((image:any) => (
+            <img src={image} alt="Woof, woof!" id="img" className="object-contain m-4 rounded shadow max-w-60 max-h-60"/>
         ))}
       </div>
     );
