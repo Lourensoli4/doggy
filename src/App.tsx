@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="font-sans text-center">
-      <Suspense fallback={<div></div>}>
+      <Suspense fallback={<div>Loading, please wait</div>}>
           < Header/>
           < Upload/>
           < Gallery/>
